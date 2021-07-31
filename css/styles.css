@@ -1,0 +1,204 @@
+@font-face {
+  font-family: 'Neuton-Light';
+  src: url('../fonts/Neuton-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Neuton-Bold';
+  src: url('../fonts/Neuton-Bold.ttf') format('truetype');
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+
+  background-image: url('../images/background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  padding-top: 64px;
+
+  font-family: 'Neuton-Light', sans-serif;
+}
+
+h1 {
+  font-weight: normal;
+}
+
+.content-container {
+  margin-left: auto;
+  margin-right: auto;
+
+  max-width: 800px;
+
+  background-color: rgba(20, 20, 20, 0.9);
+  border-radius: 8px;
+
+  overflow: hidden;
+
+  color: #fff;
+
+  background-image: url('../images/lightfoot.png');
+  background-repeat: no-repeat;
+  background-position-x: right;
+  background-position-y: bottom;
+}
+
+@media (max-width: 799px) {
+  .content-container {
+    border-radius: 0;
+  }
+}
+
+.content {
+  padding: 16px;
+  padding-right: 220px;
+}
+
+.content-title {
+  margin-top: 0;
+}
+
+.logo {
+  width: 100%;
+  height: auto;
+}
+
+.progress-section {
+  margin-top: 16px;
+  margin-left: 8px;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.progress-section .img-col img {
+  padding-right: 8px;
+}
+
+.progress-bars {
+  display: table;
+
+  width: 100%;
+  max-width: 400px;
+}
+
+.progress-bars .progress-bars-body {
+  display: table-row-group;
+}
+
+.progress {
+  display: table-row;
+}
+
+.progress > * {
+  display: table-cell;
+}
+
+.progress .progress-wrapper {
+  padding-left: 8px;
+  padding-right: 8px;
+
+  width: 100%;
+}
+
+.progress progress {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  border: none;
+  border-radius: 4px;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+
+  background-color: rgb(50, 50, 50);
+
+  width: 100%;
+  height: 10px;
+  vertical-align: baseline;
+}
+
+.progress progress::-webkit-progress-bar {
+  border-radius: 4px;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+
+  background-color: rgb(50, 50, 50);
+}
+
+.progress progress::-webkit-progress-value {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+
+  background-color: rgb(255, 219, 76);
+}
+
+.progress progress::-moz-progress-bar {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+
+  background-color: rgb(255, 219, 76);
+}
+
+.dino-btn {
+  background-image: url('../images/button-1.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: transparent;
+
+  width: 160px;
+  height: 54px;
+
+  padding-left: 0;
+  padding-top: 1px;
+  padding-right: 0;
+  padding-bottom: 0;
+
+  border: none;
+  outline: none;
+
+  cursor: pointer;
+
+  font-family: 'Neuton-Bold', sans-serif;
+}
+
+.dino-btn span {
+  background-color: #281909;
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  text-shadow: 2px 2px 3px rgba(112, 68, 19, 0.5);
+
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+
+  font-size: 26px;
+  font-weight: bold;
+  letter-spacing: 2;
+}
+
+.dino-btn:hover span {
+  text-shadow: 2px 2px 3px rgba(112, 68, 19, 0.5), 
+               -1px -1px 1px rgb(208, 135, 51);
+}
+
+.dino-btn:active span {
+  text-shadow: 2px 2px 3px rgba(112, 68, 19, 0.5), 
+               -1px -1px 1px rgb(221, 157, 84);
+}
+
+.links {
+  margin-top: 32px;
+
+  display: flex;
+  flex-direction: row;
+}
