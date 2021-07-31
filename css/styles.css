@@ -52,15 +52,19 @@ h1 {
   background-position-y: bottom;
 }
 
-@media (max-width: 799px) {
-  .content-container {
-    border-radius: 0;
-  }
-}
-
 .content {
   padding: 16px;
   padding-right: 220px;
+}
+
+@media (max-width: 799px) {
+  .content {
+    padding-right: 16px;
+  }
+  
+  .content-container {
+    border-radius: 0;
+  }
 }
 
 .content-title {
