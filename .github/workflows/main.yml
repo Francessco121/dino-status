@@ -13,6 +13,8 @@ jobs:
     steps:
     - name: Checkout this repo
       uses: actions/checkout@v2
+    - name: Install dependencies
+      run: pip3 install -r requirements.txt
     - name: Build
       run: python3 ./build.py
     - name: Publish
