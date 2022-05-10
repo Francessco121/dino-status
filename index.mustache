@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <meta property="og:title" content="Dinosaur Planet Decompilation Status" />
-  <meta property="og:description" content="Current status of the Dinosaur Planet decompilation project." />
+  <meta property="og:description" 
+        content="Current status of the Dinosaur Planet decompilation project ({{ total_matching_perct }}%)." />
   
   <title>Dinosaur Planet Decompilation Status</title>
 
@@ -30,33 +31,39 @@
             <div class="progress">
               <div class="progress-label">Total</div>
               <div class="progress-wrapper">
-                <progress value="0.1">10%</progress>
+                <progress value="{{ total_matching_ratio }}"></progress>
               </div>
-              <div class="progress-percentage">10%</div>
-            </div>
-            <div class="progress">
-              <div class="progress-label">Matching</div>
-              <div class="progress-wrapper">
-                <progress value="0.09">9%</progress>
-              </div>
-              <div class="progress-percentage">9%</div>
+              <div class="progress-percentage">{{ total_matching_perct }}%</div>
+              <div class="progress-funcs">{{ total_matching_funcs }} / {{ total_funcs }} funcs</div>
+              <div class="progress-bytes">{{ total_matching_kb }} / {{ total_kb }} KiB</div>
             </div>
             <div class="progress">
               <div class="progress-label">Core</div>
               <div class="progress-wrapper">
-                <progress value="0.47">47%</progress>
+                <progress value="{{ core_matching_ratio }}"></progress>
               </div>
-              <div class="progress-percentage">47%</div>
+              <div class="progress-percentage">{{ core_matching_perct }}%</div>
+              <div class="progress-funcs">{{ core_matching_funcs }} / {{ core_funcs }} funcs</div>
+              <div class="progress-bytes">{{ core_matching_kb }} / {{ core_kb }} KiB</div>
             </div>
             <div class="progress">
-              <div class="progress-label">DLL</div>
+              <div class="progress-label">DLLs</div>
               <div class="progress-wrapper">
-                <progress value="0">0%</progress>
+                <progress value="{{ dll_matching_ratio }}"></progress>
               </div>
-              <div class="progress-percentage">0%</div>
+              <div class="progress-percentage">{{ dll_matching_perct }}%</div>
+              <div class="progress-funcs">{{ dll_matching_funcs }} / {{ dll_funcs }} funcs</div>
+              <div class="progress-bytes">{{ dll_matching_kb }} / {{ dll_kb }} KiB</div>
             </div>
           </div>
         </div>
+      </div>
+
+      <div class="timestamp-section">
+        <small>
+          As of {{ git_commit_datetime }} UTC
+          (<a href="https://github.com/zestydevy/dinosaur-planet/commit/{{ git_commit_hash }}">{{ git_commit_hash_short }}</a>)
+        </small>
       </div>
 
       <div class="links">

@@ -1,0 +1,28 @@
+name: build
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+    if: ${{ github.event.pull_request.head.repo.full_name == github.repository || github.event_name == 'push' }}
+    runs-on: ubuntu-20.04
+    steps:
+    - name: Build
+      run: python3 ./build.py
+    - name: Publish
+      run: |
+        cd build
+        git init
+        git config user.name "GitHub Actions"
+        git config user.email "<>"
+        git remote add origin "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git"
+        git fetch
+        git reset --mixed origin/gh-pages
+        git checkout gh-pages
+        git add .
+        git commit -m "Deploy from ${{ github.sha }}"
+        git push
