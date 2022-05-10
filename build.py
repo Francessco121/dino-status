@@ -133,16 +133,22 @@ def render_templates(p):
         "git_commit_datetime": make_nice_datetime_str(datetime.fromtimestamp(p["git"]["commit_timestamp"]))
     })
 
-def generate_shield(p):
-    matching_ratio = p["total"]["matching_ratio"]
+def generate_shield(name: str, label: str, matching_ratio: float):
+    """Generates a shield JSON file for https://shields.io/endpoint"""
+    file_path = BUILD_DIR.joinpath(f"{name}.shield.json")
     color = Color("#50ca22", hue=lerp(0, 105/255, matching_ratio))
-    with open(BUILD_DIR.joinpath("progress-shield.json"), "w", encoding="utf-8") as shield_file:
-        shield_file.write(json.dumps({
+    with open(file_path, "w", encoding="utf-8") as file:
+        json.dump({
             "schemaVersion": 1,
-            "label": f"progress",
+            "label": label,
             "message": f"{matching_ratio * 100:.2f}%",
             "color": color.hex,
-        }))
+        }, file)
+
+def generate_shields(p):
+    generate_shield("total", "Total", p["total"]["matching_ratio"])
+    generate_shield("core", "Core", p["core"]["matching_ratio"])
+    generate_shield("dlls", "DLLs", p["dll"]["matching_ratio"])
 
 def main():
     # Load progress
@@ -154,8 +160,8 @@ def main():
     # Render mustache templates
     render_templates(progress)
     
-    # Create shield for https://shields.io/endpoint
-    generate_shield(progress)
+    # Create shields 
+    generate_shields(progress)
 
 if __name__ == "__main__":
     main()
