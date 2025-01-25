@@ -22,7 +22,7 @@ def make_nice_datetime_str(dt: datetime):
     else:
         hour_str = str(hour)
 
-    return "{dt:%b} {dt.day}, {hour}:{dt:%M} {dt:%p}".format(
+    return "{dt:%b} {dt.day}, {dt.year}, {hour}:{dt:%M} {dt:%p}".format(
         dt=dt, hour=hour_str)
 
 def lerp(a, b, alpha):
