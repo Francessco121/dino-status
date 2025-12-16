@@ -1,17 +1,17 @@
 {
   "total": {
-    "matching_ratio": 0.318017586409957,
-    "matching_funcs": 4087,
-    "matching_bytes": 1019600,
-    "total_funcs": 10933,
-    "total_bytes": 3206112
+    "matching_ratio": 0.319366658889844,
+    "matching_funcs": 4095,
+    "matching_bytes": 1023924,
+    "total_funcs": 10927,
+    "total_bytes": 3206108
   },
   "core": {
-    "matching_ratio": 0.6783371383984048,
-    "matching_funcs": 1442,
-    "matching_bytes": 375560,
-    "total_funcs": 1670,
-    "total_bytes": 553648
+    "matching_ratio": 0.6861521121876152,
+    "matching_funcs": 1450,
+    "matching_bytes": 379884,
+    "total_funcs": 1664,
+    "total_bytes": 553644
   },
   "dll": {
     "matching_ratio": 0.24280819645431567,
@@ -21,8 +21,8 @@
     "total_bytes": 2652464
   },
   "git": {
-    "commit_hash": "e64e36783b68b9e4b6812493e1f9eb0f5f14f802",
-    "commit_hash_short": "e64e367",
-    "commit_timestamp": 1765401465
+    "commit_hash": "f30b8286e7d1b6d675a497bafbc23c888e37b0fc",
+    "commit_hash_short": "f30b828",
+    "commit_timestamp": 1765896335
   }
 }
