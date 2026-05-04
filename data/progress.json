@@ -1,28 +1,56 @@
 {
   "total": {
-    "matching_ratio": 0.44816466150030687,
-    "matching_funcs": 5610,
-    "matching_bytes": 1436988,
-    "total_funcs": 10912,
-    "total_bytes": 3206384
+    "matching_ratio": 0.45069338979204543,
+    "matching_funcs": 5705,
+    "matching_bytes": 1445828,
+    "total_funcs": 11012,
+    "total_bytes": 3208008
   },
   "core": {
-    "matching_ratio": 0.92671143847487,
-    "matching_funcs": 1618,
-    "matching_bytes": 513324,
-    "total_funcs": 1649,
-    "total_bytes": 553920
+    "matching_ratio": 0.9351845904611015,
+    "matching_funcs": 1713,
+    "matching_bytes": 524156,
+    "total_funcs": 1749,
+    "total_bytes": 560484
   },
   "dll": {
-    "matching_ratio": 0.3482286658744473,
+    "matching_ratio": 0.348126022653619,
     "matching_funcs": 3992,
-    "matching_bytes": 923664,
+    "matching_bytes": 921672,
     "total_funcs": 9263,
-    "total_bytes": 2652464
+    "total_bytes": 2647524,
+    "engine": {
+      "matching_ratio": 0.3697056629755006,
+      "matching_funcs": 694,
+      "matching_bytes": 257744,
+      "total_funcs": 1293,
+      "total_bytes": 697160
+    },
+    "modgfx": {
+      "matching_ratio": 0.0,
+      "matching_funcs": 0,
+      "matching_bytes": 0,
+      "total_funcs": 246,
+      "total_bytes": 101256
+    },
+    "projgfx": {
+      "matching_ratio": 0.0,
+      "matching_funcs": 0,
+      "matching_bytes": 0,
+      "total_funcs": 72,
+      "total_bytes": 28644
+    },
+    "objects": {
+      "matching_ratio": 0.36470262526476765,
+      "matching_funcs": 3298,
+      "matching_bytes": 663928,
+      "total_funcs": 7652,
+      "total_bytes": 1820464
+    }
   },
   "git": {
-    "commit_hash": "7d912ace5444ca4b53e0f4fe5111937a1f8cb803",
-    "commit_hash_short": "7d912ac",
-    "commit_timestamp": 1777867327
+    "commit_hash": "e54a4f3b881b21cd537345fb7807fada37919836",
+    "commit_hash_short": "e54a4f3",
+    "commit_timestamp": 1777881154
   }
 }
