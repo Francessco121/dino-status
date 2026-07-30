@@ -1,15 +1,15 @@
 {
   "total": {
-    "matching_ratio": 0.6529923140994628,
-    "matching_funcs": 7511,
-    "matching_bytes": 2094768,
+    "matching_ratio": 0.6539474406100839,
+    "matching_funcs": 7512,
+    "matching_bytes": 2097832,
     "total_funcs": 11011,
     "total_bytes": 3207952
   },
   "core": {
-    "matching_ratio": 0.994532749969666,
-    "matching_funcs": 1747,
-    "matching_bytes": 557364,
+    "matching_ratio": 1.0,
+    "matching_funcs": 1748,
+    "matching_bytes": 560428,
     "total_funcs": 1748,
     "total_bytes": 560428
   },
@@ -49,8 +49,8 @@
     }
   },
   "git": {
-    "commit_hash": "a63ce5d371a60076be15c44d0daea8ddbdba1455",
-    "commit_hash_short": "a63ce5d",
-    "commit_timestamp": 1785446929
+    "commit_hash": "218a8f5bb2227e3a8e179f25cb60d46773fd8631",
+    "commit_hash_short": "218a8f5",
+    "commit_timestamp": 1785450641
   }
 }
