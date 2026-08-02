@@ -128,6 +128,34 @@ def render_templates(p):
         "dll_funcs": "{:,}".format(p["dll"]["total_funcs"]),
         "dll_kb": "{:,.1f}".format(p["dll"]["total_bytes"] / 1024),
 
+        "dll_engine_matching_ratio": p["dll"]["engine"]["matching_ratio"],
+        "dll_engine_matching_perct": "{:.1f}".format(p["dll"]["engine"]["matching_ratio"] * 100),
+        "dll_engine_matching_funcs": "{:,}".format(p["dll"]["engine"]["matching_funcs"]),
+        "dll_engine_matching_kb": "{:,.1f}".format(p["dll"]["engine"]["matching_bytes"] / 1024),
+        "dll_engine_funcs": "{:,}".format(p["dll"]["engine"]["total_funcs"]),
+        "dll_engine_kb": "{:,.1f}".format(p["dll"]["engine"]["total_bytes"] / 1024),
+
+        "dll_modgfx_matching_ratio": p["dll"]["modgfx"]["matching_ratio"],
+        "dll_modgfx_matching_perct": "{:.1f}".format(p["dll"]["modgfx"]["matching_ratio"] * 100),
+        "dll_modgfx_matching_funcs": "{:,}".format(p["dll"]["modgfx"]["matching_funcs"]),
+        "dll_modgfx_matching_kb": "{:,.1f}".format(p["dll"]["modgfx"]["matching_bytes"] / 1024),
+        "dll_modgfx_funcs": "{:,}".format(p["dll"]["modgfx"]["total_funcs"]),
+        "dll_modgfx_kb": "{:,.1f}".format(p["dll"]["modgfx"]["total_bytes"] / 1024),
+
+        "dll_projgfx_matching_ratio": p["dll"]["projgfx"]["matching_ratio"],
+        "dll_projgfx_matching_perct": "{:.1f}".format(p["dll"]["projgfx"]["matching_ratio"] * 100),
+        "dll_projgfx_matching_funcs": "{:,}".format(p["dll"]["projgfx"]["matching_funcs"]),
+        "dll_projgfx_matching_kb": "{:,.1f}".format(p["dll"]["projgfx"]["matching_bytes"] / 1024),
+        "dll_projgfx_funcs": "{:,}".format(p["dll"]["projgfx"]["total_funcs"]),
+        "dll_projgfx_kb": "{:,.1f}".format(p["dll"]["projgfx"]["total_bytes"] / 1024),
+
+        "dll_objects_matching_ratio": p["dll"]["objects"]["matching_ratio"],
+        "dll_objects_matching_perct": "{:.1f}".format(p["dll"]["objects"]["matching_ratio"] * 100),
+        "dll_objects_matching_funcs": "{:,}".format(p["dll"]["objects"]["matching_funcs"]),
+        "dll_objects_matching_kb": "{:,.1f}".format(p["dll"]["objects"]["matching_bytes"] / 1024),
+        "dll_objects_funcs": "{:,}".format(p["dll"]["objects"]["total_funcs"]),
+        "dll_objects_kb": "{:,.1f}".format(p["dll"]["objects"]["total_bytes"] / 1024),
+
         "git_commit_hash": p["git"]["commit_hash"],
         "git_commit_hash_short": p["git"]["commit_hash_short"],
         "git_commit_datetime": make_nice_datetime_str(datetime.fromtimestamp(p["git"]["commit_timestamp"]))

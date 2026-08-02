@@ -26,37 +26,94 @@
         <div class="img-col">
           <img src="images/map.png" />
         </div>
-        <div class="progress-bars">
-          <div class="progress-bars-body">
-            <div class="progress">
-              <div class="progress-label">Total</div>
-              <div class="progress-wrapper">
+        <table class="progress-table">
+          <tbody>
+            <tr>
+              <td>Total</td>
+              <td class="progress-bar-cell">
                 <progress value="{{ total_matching_ratio }}"></progress>
-              </div>
-              <div class="progress-percentage">{{ total_matching_perct }}%</div>
-              <div class="progress-funcs">{{ total_matching_funcs }} / {{ total_funcs }} funcs</div>
-              <div class="progress-bytes">{{ total_matching_kb }} / {{ total_kb }} KiB</div>
-            </div>
-            <div class="progress">
-              <div class="progress-label">Core</div>
-              <div class="progress-wrapper">
+              </td>
+              <td class="progress-perct">{{ total_matching_perct }}%</td>
+              <td class="progress-funcs">{{ total_matching_funcs }} / {{ total_funcs }} funcs</td>
+              <td class="progress-bytes">{{ total_matching_kb }} / {{ total_kb }} KiB</td>
+            </tr>
+            <tr>
+              <td>Core</td>
+              <td class="progress-bar-cell">
                 <progress value="{{ core_matching_ratio }}"></progress>
-              </div>
-              <div class="progress-percentage">{{ core_matching_perct }}%</div>
-              <div class="progress-funcs">{{ core_matching_funcs }} / {{ core_funcs }} funcs</div>
-              <div class="progress-bytes">{{ core_matching_kb }} / {{ core_kb }} KiB</div>
-            </div>
-            <div class="progress">
-              <div class="progress-label">DLLs</div>
-              <div class="progress-wrapper">
+              </td>
+              <td class="progress-perct">{{ core_matching_perct }}%</td>
+              <td class="progress-funcs">{{ core_matching_funcs }} / {{ core_funcs }} funcs</td>
+              <td class="progress-bytes">{{ core_matching_kb }} / {{ core_kb }} KiB</td>
+            </tr>
+            <tr>
+              <td>DLLs</td>
+              <td class="progress-bar-cell">
                 <progress value="{{ dll_matching_ratio }}"></progress>
-              </div>
-              <div class="progress-percentage">{{ dll_matching_perct }}%</div>
-              <div class="progress-funcs">{{ dll_matching_funcs }} / {{ dll_funcs }} funcs</div>
-              <div class="progress-bytes">{{ dll_matching_kb }} / {{ dll_kb }} KiB</div>
-            </div>
-          </div>
-        </div>
+              </td>
+              <td class="progress-perct">{{ dll_matching_perct }}%</td>
+              <td class="progress-funcs">{{ dll_matching_funcs }} / {{ dll_funcs }} funcs</td>
+              <td class="progress-bytes">{{ dll_matching_kb }} / {{ dll_kb }} KiB</td>
+            </tr>
+            <tr>
+              <td class="progress-L">└</td>
+              <td rowspan="4">
+                <table class="progress-table">
+                  <tbody>
+                    <tr>
+                      <td>Engine</td>
+                      <td class="progress-bar-cell">
+                        <progress value="{{ dll_engine_matching_ratio }}"></progress>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Modgfx</td>
+                      <td class="progress-bar-cell">
+                        <progress value="{{ dll_modgfx_matching_ratio }}"></progress>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Projgfx</td>
+                      <td class="progress-bar-cell">
+                        <progress value="{{ dll_projgfx_matching_ratio }}"></progress>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Objects</td>
+                      <td class="progress-bar-cell">
+                        <progress value="{{ dll_objects_matching_ratio }}"></progress>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+              <td class="progress-perct">{{ dll_engine_matching_perct }}%</td>
+              <td class="progress-funcs">{{ dll_engine_matching_funcs }} / {{ dll_engine_funcs }} funcs</td>
+              <td class="progress-bytes">{{ dll_engine_matching_kb }} / {{ dll_engine_kb }} KiB</td>
+            </tr>
+            <tr>
+              <td class="progress-L">└</td>
+              <!---->
+              <td class="progress-perct">{{ dll_modgfx_matching_perct }}%</td>
+              <td class="progress-funcs">{{ dll_modgfx_matching_funcs }} / {{ dll_modgfx_funcs }} funcs</td>
+              <td class="progress-bytes">{{ dll_modgfx_matching_kb }} / {{ dll_modgfx_kb }} KiB</td>
+            </tr>
+            <tr>
+              <td class="progress-L">└</td>
+              <!---->
+              <td class="progress-perct">{{ dll_projgfx_matching_perct }}%</td>
+              <td class="progress-funcs">{{ dll_projgfx_matching_funcs }} / {{ dll_projgfx_funcs }} funcs</td>
+              <td class="progress-bytes">{{ dll_projgfx_matching_kb }} / {{ dll_projgfx_kb }} KiB</td>
+            </tr>
+            <tr>
+              <td class="progress-L">└</td>
+              <!---->
+              <td class="progress-perct">{{ dll_objects_matching_perct }}%</td>
+              <td class="progress-funcs">{{ dll_objects_matching_funcs }} / {{ dll_objects_funcs }} funcs</td>
+              <td class="progress-bytes">{{ dll_objects_matching_kb }} / {{ dll_objects_kb }} KiB</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
 
       <div class="timestamp-section">
