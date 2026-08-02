@@ -3,8 +3,8 @@
 
 import json
 import sys
+import time
 from colour import Color
-from datetime import datetime
 import shutil
 import chevron
 import os
@@ -13,17 +13,9 @@ from pathlib import Path
 SRC_DIR = Path(os.path.dirname(os.path.realpath(__file__)))
 BUILD_DIR = SRC_DIR.joinpath("build")
 
-def make_nice_datetime_str(dt: datetime):
-    hour = dt.hour
-    if hour == 0:
-        hour_str = "12"
-    elif hour > 12:
-        hour_str = str(hour - 12)
-    else:
-        hour_str = str(hour)
+def make_nice_datetime_str(dt: time.struct_time):
+    return time.strftime("%b %-d, %Y, %-I:%M %p", dt)
 
-    return "{dt:%b} {dt.day}, {dt.year}, {hour}:{dt:%M} {dt:%p}".format(
-        dt=dt, hour=hour_str)
 
 def lerp(a, b, alpha):
     return a + (b - a) * alpha
@@ -158,7 +150,8 @@ def render_templates(p):
 
         "git_commit_hash": p["git"]["commit_hash"],
         "git_commit_hash_short": p["git"]["commit_hash_short"],
-        "git_commit_datetime": make_nice_datetime_str(datetime.fromtimestamp(p["git"]["commit_timestamp"]))
+        "git_commit_datetime": make_nice_datetime_str(time.gmtime(p["git"]["commit_timestamp"])),
+        "git_commit_timestamp": p["git"]["commit_timestamp"]
     })
 
 def generate_shield(name: str, label: str, matching_ratio: float):

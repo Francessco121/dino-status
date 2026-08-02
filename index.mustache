@@ -118,7 +118,7 @@
 
       <div class="timestamp-section">
         <small>
-          As of {{ git_commit_datetime }} UTC
+          As of <span id="git-commit-time" data-timestamp="{{ git_commit_timestamp }}">{{ git_commit_datetime }} UTC</span>
           (<a href="https://github.com/zestydevy/dinosaur-planet/commit/{{ git_commit_hash }}">{{ git_commit_hash_short }}</a>)
         </small>
       </div>
@@ -137,5 +137,19 @@
       </div>
     </div>
   </div>
+  <script>
+    const timestampElement = document.getElementById("git-commit-time");
+    const timestamp = parseInt(timestampElement.dataset.timestamp) * 1000;
+    const localDate = new Date(timestamp);
+    const dtFormat = new Intl.DateTimeFormat(undefined, {
+      year: "numeric",
+      month: "short",
+      day: "numeric",
+      hour: "numeric",
+      minute: "2-digit",
+      timeZoneName: "short"
+    });
+    timestampElement.innerText = dtFormat.format(localDate);
+  </script>
 </body>
 </html>
