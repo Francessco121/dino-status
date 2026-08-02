@@ -23,6 +23,7 @@ body {
   background-image: url('../images/background-new.png');
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
 
   padding-top: 64px;
 
